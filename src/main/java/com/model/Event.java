@@ -1,6 +1,12 @@
 package com.model;
-
-import java.util.Date;
+/*{
+    "name":"Lecture Series",
+    "information":"infromation type",
+    "location":"Bangalore",
+    "date":"24 sep",
+    "time":"10 AM",
+    "speakers":"Ajinkya Bhosale,Akshay Bhosale"
+}*/
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,9 +22,16 @@ public class Event {
 	private int id;
 	private String name;
 	private String information;
-	private Date date;
+	private String date;
+	private String time;
 	private String location;
 	private String speakers;
+	public String getTime() {
+		return time;
+	}
+	public void setTime(String time) {
+		this.time = time;
+	}
 	public int getId() {
 		return id;
 	}
@@ -37,10 +50,10 @@ public class Event {
 	public void setInformation(String information) {
 		this.information = information;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public String getLocation() {
